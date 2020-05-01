@@ -1,1 +1,32 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item (click)="0">
+          Inicio
+        </button>
+            <button ion-item *ngIf="_us.activo()" (click)="_us.cerrar_sesion()">
+          Salir
+        </button>
+            <!-- <button ion-item (click)="0">
+          Events
+        </button>
+
+            <button ion-item (click)="0">
+          Close Menu
+        </button> -->
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+
+
+
+<!-- <ion-nav [root]="rootPage">
+</ion-nav> -->

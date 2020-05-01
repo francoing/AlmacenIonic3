@@ -1,0 +1,23 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>ordenes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    
+      
+      
+      <button ion-item *ngFor="let orden  of _cs.ordenes" 
+      [navPush]="ordenesDetalle"
+      [navParams]="{orden : orden}">
+
+        <strong>Orden ID:{{orden.id}}</strong>
+      </button>
+   
+  </ion-list>
+
+
+</ion-content>

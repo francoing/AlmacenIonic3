@@ -1,5 +1,7 @@
 {
   "name": "TiendaV3",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
