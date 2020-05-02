@@ -8,6 +8,7 @@ import { UsuarioProvider } from './index.services';
 
 
 //import { HomePage } from '../pages/home/home';
+import { CarritoPage } from '../pages/carrito/carrito';
 @Component({
   templateUrl: 'app.html'
 })
@@ -22,5 +23,9 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+
+
+
+  
 }
 

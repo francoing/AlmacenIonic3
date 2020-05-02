@@ -9,7 +9,7 @@
             <button ion-item (click)="0">
           Inicio
         </button>
-            <button ion-item *ngIf="_us.activo()" (click)="_us.cerrar_sesion()">
+            <button ion-item *ngIf="_us.activo()" (click)="_us.cerrar_sesion()" (click)="_us.presentLoading()">
           Salir
         </button>
             <!-- <button ion-item (click)="0">

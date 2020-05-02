@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,ViewController } from 'ionic-angular';
 import { CarritoProvider } from "../../providers/carrito/carrito";
 import { URL_SERVICIOS } from "../../config/url.servicios";
+
 /**
  * Generated class for the CarritoPage page.
  *
@@ -30,10 +31,12 @@ export class CarritoPage {
                 this.cantidad_selec='1';
 
   }
+  
+}
 
   
 
 
 
 
-}
+

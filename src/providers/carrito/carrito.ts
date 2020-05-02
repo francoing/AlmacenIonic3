@@ -8,6 +8,7 @@ import { UsuarioProvider } from "../usuario/usuario";
 //paginas del carrito
 import { CarritoPage,LoginPage } from "../../app/index.pages";
 import { URL_SERVICIOS } from "../../config/url.servicios";
+
 import { Observable } from 'rxjs/Observable';
 
 
@@ -17,15 +18,12 @@ export class CarritoProvider {
 
   items:any[]=[];
   total_carrito:number=0;
-  subtotal_carrito:number=0;
   ordenes:any[]=[];
-  //cantidad:number=1;
   subtotal:Number;
   //data:Observable<any>;
   producto_id:string;
   cantidad:string;
   precio:Number;
-  //cantidades:any[]=[];
  
 
   constructor(public http: HttpClient,
@@ -59,6 +57,7 @@ export class CarritoProvider {
     this.guardar_storage();
       
    for (let item of this.items) {
+
     codigos.push(item.codigo,item.cantidad,item.precio_compra);
       
       
@@ -178,6 +177,7 @@ export class CarritoProvider {
 
   //agrega al carrito y lo guarda en el storage
   agregar_carrito(item_parametro:any){
+    item_parametro.cantidad='1';
     for (let item of this.items) {
 
       if (item.codigo == item_parametro.codigo) {

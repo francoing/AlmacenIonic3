@@ -7,6 +7,8 @@ import { URL_SERVICIOS } from "../../config/url.servicios";
 import { AlertController,Platform } from "ionic-angular";
 import { Storage } from '@ionic/storage';
 
+import { LoadingController } from 'ionic-angular';
+
 
 
 @Injectable()
@@ -19,7 +21,8 @@ export class UsuarioProvider {
   constructor(public http: HttpClient,
               private alertCtrl:AlertController,
               private platform:Platform,
-              private storage:Storage) {
+              private storage:Storage,
+              public loadingCtrl:LoadingController) {
     console.log('Hello UsuarioProvider Provider');
     this.cargar_storage();
   }
@@ -157,6 +160,14 @@ export class UsuarioProvider {
     return promesa;
     
 
+  }
+
+  presentLoading() {
+    const loader = this.loadingCtrl.create({
+      content: "Espere un momento...",
+      duration: 3000
+    });
+    loader.present();
   }
 
 }
