@@ -24,6 +24,9 @@ export class CarritoProvider {
   producto_id:string;
   cantidad:string;
   precio:Number;
+  subtotalGeneral:Number;
+  total:number;
+
  
 
   constructor(public http: HttpClient,
@@ -197,35 +200,28 @@ export class CarritoProvider {
 
   }
 
-  calcular_subtotal(cantidad,precio){
+  calcular_subtotal(cantidad,precio,subtotal){
  
-     return  cantidad *precio;
+     return subtotal=Number(cantidad *precio) ;
   }
-  // actualizar_total2(){
+  
+  actualizar_total2(){
 
-
-  //   this.subtotal=this.calcular_subtotal(this.cantidad,this.precio);
-  //   this.total_carrito = 0;
-  //   for (let item of this.items){
-  //     this.total_carrito = this.total_carrito + Number(item.precio_compra);
-  //   }
-  //   console.log('Total:',this.total_carrito);
-  //   // this.subtotal
-  //   return Number(this.total_carrito);
-  // }
+    this.total = this.items.reduce((
+      acc,
+      item,
+    ) => acc + (item.precio_compra * item.cantidad),
+    0);
+    console.log("Total: ", this.total)
+    return this.total;
+  }
 
 
 
   actualizar_total(){
 
-    // this.subtotal=this.calcular_subtotal(this.cantidad,this.precio);
-    // this.total_carrito = 0;
-    // for (let item of this.items){
-    //   this.total_carrito +=Number(item.precio_compra);
-    // }
-    // console.log('Total:',this.total_carrito);
-    // return Number(this.total_carrito);
-
+   
+    
     this.total_carrito =0;
     this.items.forEach(item => {
       this.total_carrito += Number(item.precio_compra);

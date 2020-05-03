@@ -57,7 +57,7 @@
 
                     </ion-row>
                     <div>
-                        <p>Subtotal:{{_cs.calcular_subtotal(item.cantidad,item.precio_compra)}}</p>
+                        <p>Subtotal:{{_cs.calcular_subtotal(item.cantidad,item.precio_compra,subtotal)}}</p>
 
                         <!-- <p>Subtotal:{{calcular_subtotal(item.cantidad,item.precio_compra)}}</p> -->
                     </div>
@@ -74,16 +74,16 @@
         <ion-grid>
             <ion-row>
                 <ion-col>
-                    <h3>
+                    <!-- <h3>
                         <strong>
                         Total:{{ _cs.actualizar_total() | currency:'USD' :true }}
                          </strong>
-                    </h3>
-                    <!-- <h3>
-                        <strong>
-                        Total:{{_cs.actualizar_total2(subtotal) }}
-                         </strong>
                     </h3> -->
+                    <h3>
+                        <strong>
+                        Total:{{_cs.actualizar_total2() | currency:'USD' :true }}
+                         </strong>
+                    </h3>
 
                 </ion-col>
             </ion-row>

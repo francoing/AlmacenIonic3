@@ -1,7 +1,7 @@
 <ion-menu [content]="content">
     <ion-header>
-        <ion-toolbar>
-            <ion-title>Menu</ion-title>
+        <ion-toolbar color="primary">
+            <ion-title text-center>Menu</ion-title>
         </ion-toolbar>
     </ion-header>
     <ion-content>
@@ -21,6 +21,13 @@
         </button> -->
         </ion-list>
     </ion-content>
+    <ion-footer>
+        <ion-toolbar>
+            <strong>
+            <p text-center>Lencina soluciones informaticas</p>
+          </strong>
+        </ion-toolbar>
+    </ion-footer>
 </ion-menu>
 
 <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
