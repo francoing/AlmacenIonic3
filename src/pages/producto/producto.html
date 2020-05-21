@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color="danger" text-center>
         <ion-title>{{ producto.producto }}</ion-title>
     </ion-navbar>
 </ion-header>
@@ -25,7 +25,7 @@
         </p>
 
 
-        <button ion-button block icon-left (click)="_cs.agregar_carrito(producto)" (click)="viewController.dismiss()">
+        <button ion-button block icon-left color="amarillo" (click)="_cs.agregar_carrito(producto)" (click)="viewController.dismiss()">
       <ion-icon name="cart"></ion-icon>
       Agregar al carrito
     </button>

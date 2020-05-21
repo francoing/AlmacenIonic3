@@ -1,14 +1,14 @@
 <ion-menu [content]="content">
     <ion-header>
-        <ion-toolbar color="primary">
+        <ion-toolbar color="danger">
             <ion-title text-center>Menu</ion-title>
         </ion-toolbar>
     </ion-header>
     <ion-content>
         <ion-list>
-            <button ion-item (click)="0">
+            <!-- <button ion-item (click)="0">
           Inicio
-        </button>
+        </button> -->
             <button ion-item *ngIf="_us.activo()" (click)="_us.cerrar_sesion()" (click)="_us.presentLoading()">
           Salir
         </button>
@@ -24,7 +24,21 @@
     <ion-footer>
         <ion-toolbar>
             <strong>
-            <p text-center>Lencina soluciones informaticas</p>
+            <p text-center>La tentacion Group.</p>
+            <div class="row" text-center>
+              <div class="col">
+                <ion-icon  name="logo-facebook"></ion-icon>
+              </div>
+              <div class="col">
+                <ion-icon  name="logo-instagram"></ion-icon>
+              </div>
+              <div class="col">
+                <ion-icon name="mail"></ion-icon>
+                <!-- <ion-icon ios="ios-mail" md="md-mail"></ion-icon> -->
+
+              </div>
+              
+            </div>
           </strong>
         </ion-toolbar>
     </ion-footer>

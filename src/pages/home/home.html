@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar color="primary">
+    <ion-navbar color="danger">
 
         <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -14,7 +14,7 @@
         </ion-buttons> -->
 
         <ion-title text-center>
-            Almacen
+            La Tentacion
         </ion-title>
 
         <ion-buttons end>
@@ -34,15 +34,16 @@
 <ion-content no-padding>
 
     <ion-slides pager class="featureSlider">
-        <ion-slide style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTGDMJ98J96CXURgfrYlOV7T_pDxx5HYOM3KTZNbz2uzqOxKzEq'); background-position: center center; background-size: cover;">
-            <button ion-button style="right: 20px; bottom: 15%; position: absolute;">Solo lo mejor</button>
+
+        <ion-slide style="background-image: url('https://scontent.ftuc1-1.fna.fbcdn.net/v/t31.0-8/s720x720/280855_147582135317072_3206334_o.jpg?_nc_cat=107&_nc_sid=7aed08&_nc_eui2=AeGxSkTWzfNwbhrzCZHiC3JRIzBXmS9nBh0jMFeZL2cGHaviHtPV9Ul1Dtdzya7GMf4V7lsOQsGavH0BHWhbppEi&_nc_oc=AQlYg9f53ZTGmnVAZQuwmQnePvvC1UIdXfnJeV_T1bkxmKuImLDZ2M6MPtCMFOOZnk0&_nc_ht=scontent.ftuc1-1.fna&_nc_tp=7&oh=84ba69d062e4281c521d72763b530907&oe=5EDA16C7'); background-position: center center; background-size: cover;">
+            <!-- <button ion-button style="right: 20px; bottom: 15%; position: absolute;">Solo lo mejor</button> -->
         </ion-slide>
 
-        <ion-slide style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTGDMJ98J96CXURgfrYlOV7T_pDxx5HYOM3KTZNbz2uzqOxKzEq'); background-position: center center; background-size: cover;">
+        <ion-slide style="background-image: url('https://scontent.ftuc1-1.fna.fbcdn.net/v/t1.0-9/s960x960/65650247_2713855082023085_3032997185928036352_o.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_eui2=AeFm7kqh-UNjejO3IE9dbAZ3d2A1oGPtD7d3YDWgY-0Pt3zLsSsYCBM9f_VY5p-Sj5iPr1i5VQv6JqSaLs_iPloL&_nc_oc=AQlWQ5T6ysjztJN3M657poJDxJsoIATs3tVxorHngO3NP1FGw2SpqJImVwh7Nq_0mhg&_nc_ht=scontent.ftuc1-1.fna&_nc_tp=7&oh=e993f4cd6bb407e6e9c036675883c179&oe=5ED914AA'); background-position: center center; background-size: cover;">
             <button ion-button style="right: 20px; bottom: 15%; position: absolute;">Explora categorias</button>
         </ion-slide>
 
-        <ion-slide style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTGDMJ98J96CXURgfrYlOV7T_pDxx5HYOM3KTZNbz2uzqOxKzEq'); background-position: center center; background-size: cover;">
+        <ion-slide style="background-image: url('https://scontent.ftuc1-2.fna.fbcdn.net/v/t1.0-9/p960x960/91250784_3558025137606071_1991400323100442624_o.jpg?_nc_cat=111&_nc_sid=8024bb&_nc_eui2=AeErWT4qWfWXNcWuwbOMfZjS1W1GXlazf-zVbUZeVrN_7BPTT3W2ga37cP1p09WDXs1p4sdOSpwwoyXi8yEMvSCc&_nc_oc=AQntMvYNx5zLDw4D5xA6lqj5oTMNyYzABOd8R3xP2pTHJVt0M4NUNE0_l5v3daYUZrw&_nc_ht=scontent.ftuc1-2.fna&_nc_tp=6&oh=45531a3a0fd39c648125ea14a8536b55&oe=5EDAF8D3'); background-position: center center; background-size: cover;">
             <button ion-button style="right: 20px; bottom: 15%; position: absolute;">Comprar ahora!</button>
         </ion-slide>
     </ion-slides>
@@ -52,7 +53,7 @@
             <ion-row>
                 <ion-col>
                     <ion-card>
-                        <button ion-button item-center block>
+                        <button ion-button item-center block color="amarillo">
                   <ion-icon [name]="categoria.icono" ></ion-icon>
                   {{ categoria.linea }}
                 </button>
@@ -75,7 +76,7 @@
                         <ion-label color="secondary">
                             <b>{{ item.precio_compra | currency:'USD' :true}}</b>
                         </ion-label>
-                        <button ion-button block fill="clear"> 
+                        <button ion-button block color="amarillo" fill="clear"> 
               <ion-icon name="add"></ion-icon>
             </button>
                     </div>

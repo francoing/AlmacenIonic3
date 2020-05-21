@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color="danger">
 
         <div class="row">
 
@@ -34,7 +34,7 @@
 
     </ion-list>
 
-    <button ion-button block icon-only [disabled]="correo.length < 5 || contrasena.length < 5 " (click)="ingresar()">
+    <button ion-button block icon-only color="amarillo" [disabled]="correo.length < 5 || contrasena.length < 5 " (click)="ingresar()">
     <ion-icon name="ios-person-outline"> </ion-icon>
     Ingresar
   </button>
